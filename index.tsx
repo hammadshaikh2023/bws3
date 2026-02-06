@@ -1,3 +1,4 @@
+import './index.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
@@ -17,7 +18,6 @@ root.render(
 // PWA Service Worker Registration
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    // Use relative path ./sw.js to ensure it works on subpaths in preview environments
     navigator.serviceWorker.register('./sw.js')
       .then(registration => {
         console.log('SW registered: ', registration);
